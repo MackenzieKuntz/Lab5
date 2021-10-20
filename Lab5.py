@@ -17,8 +17,10 @@ rplot = comet_orbit[1]
 fig = plt.figure()
 camera = Camera(fig)
 
+
 for i in range(200):
-    plt.scatter(thplot[i],rplot[i])
+    plt.scatter(rplot[i]*np.cos(thplot[i]),rplot[i]*np.sin(thplot[i]), c = 'r')
+    plt.scatter(0,0, c = 'y')
     camera.snap()
 animation = camera.animate()
 plt.show()
